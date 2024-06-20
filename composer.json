@@ -1,0 +1,38 @@
+{
+    "name": "kriptonix/laravel-nostr-auth",
+    "version": "1.0.0",
+    "description": "Use Nostr bowrser extension to login to Laravel Application",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Kriptonix",
+            "email": "kriptonic@nostr.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Kriptonix\\LaravelNostrAuth\\": "src",
+            "Kriptonix\\LaravelNostrAuth\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-f": "vendor/bin/phpunit --filter",
+        "lint": "@php vendor/bin/php-cs-fixer fix -v"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Kriptonix\\LaravelNostrAuth\\LaravelNostrAuthServiceProvider"
+            ]
+        }
+    },
+    "require-dev": {
+        "orchestra/testbench": "^8.0",
+        "friendsofphp/php-cs-fixer": "^3.59"
+    },
+    "require": {
+        "uma/phpecc": "^0.1.3"
+    }
+}
