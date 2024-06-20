@@ -1,7 +1,6 @@
 # laravel-nostr-auth
 
 ![CI](https://github.com/kriptonix/laravel-nostr-auth/actions/workflows/ci.yml/badge.svg)
-![Packagist PHP Version](https://img.shields.io/packagist/dependency-v/kriptonix/laravel-nostr-auth/php)
 ![GitHub contributors](https://img.shields.io/github/contributors/kriptonix/laravel-nostr-auth)
 ![GitHub issues](https://img.shields.io/github/issues/kriptonix/laravel-nostr-auth)
 ![GitHub last commit (branch)](https://img.shields.io/github/last-commit/kriptonix/laravel-nostr-auth/main)
