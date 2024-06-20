@@ -11,8 +11,7 @@
     ],
     "autoload": {
         "psr-4": {
-            "Kriptonix\\LaravelNostrAuth\\": "src",
-            "Kriptonix\\LaravelNostrAuth\\Tests\\": "tests"
+            "Kriptonix\\LaravelNostrAuth\\": "src"
         }
     },
     "scripts": {
