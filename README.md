@@ -13,9 +13,10 @@ More info about Nostr: https://github.com/nostr-protocol/nostr.
 ## Features
 - Log in or register using Nostr browser key management extensions
 - Automatically register new users with their public key
-- Default email set to <pubkey>@nostr.io
+- Default email set to '<pubkey>@nostr.io'
 - Default name set to 'Nostr User'
 - Default password set to a hash of a random integer (not cryptographically secure)
+- You can set where you want to redirect users after successful login in config/nostr-auth.php
 - You can customize user registration details in the NostrAuthController
 - You can disable default authentication via email/password if desired
 
@@ -58,7 +59,9 @@ protected $fillable = [
     ];
 ```
 
-Add `@stack('scripts')` to layout views or static HTML pages where you want to show the "Login with Nostr" button/link. **Note**: For the script to work, csrf_token should be used. When implementing the login button on static HTML pages, include the following in the <head> section:
+Add `@stack('scripts')` to layout views or static HTML pages where you want to show the "Login with Nostr" button/link. 
+
+**Note**: For the script to work, csrf_token should be used. When implementing the login button on static HTML pages, include the following in the <head> section:
 ```html
 <meta name="csrf-token" content="{{ csrf_token() }}">
 ```

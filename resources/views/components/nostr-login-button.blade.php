@@ -24,7 +24,7 @@
         const signature = signedEvent['sig'];
         
         const csrfToken = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
-        
+
         fetch('/nostr-login', {
             method: 'POST',
             headers: {
@@ -33,17 +33,10 @@
             },
             body: JSON.stringify(signedEvent),
         })
-        .then(response => {
-            if (response.status == 401) {
-                document.getElementById("status").innerText = "User not logged in.";
-            }
-            return response.json();
-        })
+        .then(response => response.json())
         .then(data => {
             if (data.redirect) {
                 window.location.href = data.redirect;
-            } else {
-                document.getElementById("status").innerText = "User logged in with token " + data.token;
             }
         })
         .catch(error => {
