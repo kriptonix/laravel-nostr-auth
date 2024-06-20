@@ -27,6 +27,7 @@ class NostrAuthController extends Controller
 
         if ($verify) {
             $user = User::where('pubkey', $request['pubkey'])->first();
+
             if (!$user) {
                 // Create a new user
                 $user = User::create([
@@ -36,6 +37,7 @@ class NostrAuthController extends Controller
                     'pubkey' => $request['pubkey'],
                 ]);
             }
+
             // Log the user in
             Auth::login($user);
 

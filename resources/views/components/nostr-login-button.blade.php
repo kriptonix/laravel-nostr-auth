@@ -24,6 +24,7 @@
         const signature = signedEvent['sig'];
         
         const csrfToken = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
+        
         fetch('/nostr-login', {
             method: 'POST',
             headers: {

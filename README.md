@@ -58,7 +58,7 @@ protected $fillable = [
     ];
 ```
 
-Add @stack('scripts') to layout views or static HTML pages where you want to show the "Login with Nostr" button/link. **Note**: For the script to work, csrf_token should be used. When implementing the login button on static HTML pages, include the following in the <head> section:
+Add `@stack('scripts')` to layout views or static HTML pages where you want to show the "Login with Nostr" button/link. **Note**: For the script to work, csrf_token should be used. When implementing the login button on static HTML pages, include the following in the <head> section:
 ```html
 <meta name="csrf-token" content="{{ csrf_token() }}">
 ```

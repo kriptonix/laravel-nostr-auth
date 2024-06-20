@@ -17,18 +17,12 @@ class LaravelNostrAuthServiceProvider extends ServiceProvider
 
     public function boot()
     {
-        // Publish the configuration file
-        // $this->publishes([
-        //     __DIR__ . '/../config/nostr-auth.php' => config_path('nostr-auth.php'),
-        // ], 'config');
-
         Blade::anonymousComponentPath(__DIR__.'/../resources/views/components', 'nostrauth');
 
         // Add the Nostr Auth routes
         $this->addNostrAuthRoutes();
 
         if ($this->app->runningInConsole()) {
-
             /**
              * Publish config php artisan vendor:publish --provider="Kriptonix\LaravelNostrAuth\LaravelNostrAuthServiceProvider" --tag="config"
              */
@@ -51,8 +45,6 @@ class LaravelNostrAuthServiceProvider extends ServiceProvider
                 // you can add any number of migrations here
                 ], 'migrations');
             }
-
-            //$this->loadRoutesFrom(__DIR__.'/../routes/web.php');
         }
     }
 }
