@@ -1,6 +1,5 @@
 {
     "name": "kriptonix/laravel-nostr-auth",
-    "version": "1.0.0",
     "description": "Use Nostr bowrser extension to login to Laravel Application",
     "type": "library",
     "license": "MIT",
