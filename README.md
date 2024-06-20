@@ -4,7 +4,7 @@
 ![GitHub issues](https://img.shields.io/github/issues/kriptonix/laravel-nostr-auth)
 ![GitHub last commit (branch)](https://img.shields.io/github/last-commit/kriptonix/laravel-nostr-auth/main)
 
-This package allows users to log in to Laravel application using Nostr browser key management extensions (e.g., Alby). This package enables users to authenticate by signing a message with their private key and sending the signature and public key for verification. If the verification is successful and the user is not registered in the Laravel application, the package will register the user, adding them to the users table with the corresponding public key. If the user with given public key is already registered in will be logged in.
+This package allows users to log in to Laravel application using Nostr browser key management extensions (e.g., Alby). It enables users to authenticate by signing a message with their private key and sending the signature and public key for verification. If the verification is successful and the user is not registered in the Laravel application, the package will register the user, adding them to the users table with the corresponding public key. If the user with given public key is already registered in will be logged in.
 
 More info about Nostr: https://github.com/nostr-protocol/nostr.
 
